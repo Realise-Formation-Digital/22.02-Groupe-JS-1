@@ -13,6 +13,7 @@ footer{
     border: black 3px solid;
     border-radius:30px;
     margin: 0.5rem;
+    color: black;
 }
 .power-up-prix{
     text-align: center;
@@ -53,13 +54,21 @@ footer{
     border-radius:30px;
     margin: 0.5rem;
 }
+#inventaire-btn-pagemarchand:hover{
+    color: white;
+    background-color: grey;
+}
 #carte-joueur{
     background-color: grey;
     border-radius: 40px;
     border: 3px solid black;
     padding: 1rem;
 }
-.img-joueur{
+#armes-a-vendre{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.bordure{
     border-radius: 40px;
     border: 3px solid black;
     font-weight: bold;
