@@ -1,0 +1,39 @@
+.headed {
+    background-color: rgb(143, 3, 3);
+    color: white;
+    height: 5rem;    
+}
+.stat {
+    background-color: black;
+    height: 9rem;
+}
+#game {
+    height: 43rem;
+    background-image:url(./img/dungeon.png);
+    background-repeat: no-repeat;
+    background-size:59rem;
+}
+.hero {
+    margin-top: 6rem;
+    margin-left: 3rem;
+    height: 20rem;
+}
+.heroname {
+    margin-left: 14rem;
+    font-size: 2rem;
+}
+.herodmg {
+    height:3rem;
+    margin-left: 10rem;
+}
+.heroendu {
+    height: 3rem;
+    margin-left: 12rem;
+}
+.monsterdmg {
+    position: relative;
+    height:3rem;
+    margin-left: 37rem;
+    bottom:5.5vh;
+    
+}
