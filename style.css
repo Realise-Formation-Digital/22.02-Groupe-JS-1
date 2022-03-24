@@ -1,0 +1,70 @@
+body{
+    height: 100vh;
+    background: rgb(3,112,140);
+    background: linear-gradient(0deg, rgba(3,112,140,1) 0%, rgba(4,48,65,1) 100%);
+    color: black;
+}
+footer{
+    margin-top: 30px;
+}
+.power-up{
+    background-color: rgb(182, 155, 5);
+    padding: 1rem 2rem;
+    border: black 3px solid;
+    border-radius:30px;
+    margin: 0.5rem;
+}
+.power-up-prix{
+    text-align: center;
+    color: rgb(182, 155, 5);
+    text-shadow: black 2px 2px 2px;
+}
+#boite-partie-sup-marchand{
+    margin-top: 30px;
+}
+#carte-marchand{
+    background-color: black;
+    border-radius: 40px;
+    border: 3px solid black;
+    color: rgb(182, 155, 5);
+    font-weight: bold;
+    text-align: center;
+    
+}
+#titre-marchand{
+    text-align: center;
+    color: rgb(224, 191, 3);
+    
+}
+#buy-power-up{
+    margin-top: 10%;
+}
+#head-part{
+    height: 20vh;
+}
+#marchand-img{
+    border-radius: 40px;
+}
+#inventaire-btn-pagemarchand{
+
+    background-color: rgb(1, 1, 110);
+    padding: 0.4rem 0.8rem;
+    border: black 3px solid;
+    border-radius:30px;
+    margin: 0.5rem;
+}
+#carte-joueur{
+    background-color: grey;
+    border-radius: 40px;
+    border: 3px solid black;
+    padding: 1rem;
+}
+.img-joueur{
+    border-radius: 40px;
+    border: 3px solid black;
+    font-weight: bold;
+    text-align: center;
+}
+img{
+    object-fit: cover;
+}
