@@ -1,3 +1,4 @@
+/* Gab */
 .headed {
     background-color: rgb(143, 3, 3);
     color: white;
@@ -36,4 +37,33 @@
     margin-left: 37rem;
     bottom:5.5vh;
     
+}
+/* bruno */
+.modal-content{
+    width: 1000px;
+}
+
+.row{
+    display:flex;
+    flex-wrap: nowrap;
+    
+}
+
+#amr-inventory{
+    object-fit: cover;
+}
+
+.bordure{
+    border-radius: 40px;
+    border: 3px solid black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.power-up{
+    background-color: rgb(182, 155, 5);
+    padding: 1rem 2rem;
+    border: black 3px solid;
+    border-radius:30px;
+    margin: 0.5rem;
 }
