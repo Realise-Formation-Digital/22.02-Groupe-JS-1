@@ -1,20 +1,21 @@
 class Hero {
     pV;
-    xP;
+    xPHero;
     attaque;
     defence;
     sacDarmes = [];
     sous;
     
-    constructor(pV,xP,attaque,defence,sacDarmes,sous){
+    constructor(pV,xPHero,attaque,defence,sacDarmes,sous){
         this.pV = pV
-        this.xP = xP
+        this.xPHero = xPHero
         this.attaque = attaque
         this.defence = defence
         this.sacDarmes = sacDarmes
         this.sous = sous
     }
    
+    
    fight(){
        /*si le héro bat le monstre
        
@@ -78,3 +79,5 @@ quel marchant et recevoir 50% du prix de l’arme
         */
    }
 }
+pV,xPHero,attaque,defence,sacDarmes,sous
+let hero = new hero(10,1,1,1,["épee","hache"], 1000)

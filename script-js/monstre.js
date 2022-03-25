@@ -1,20 +1,21 @@
-class monster {
+class monster extends Hero{
     name;
     xp;
     attaque;
     defence;
     sous;
-    arme;
-    constructor(name, sous, arme) {
+    armeMonstre;
+    constructor(name, sous, armeMonstre) {
+        super(this.xPHero)
         this.name = name;
         // this.attaque = attaque;
         // this.defence = defence;
         // this.xp = xp;
         this.sous = sous;
-        this.arme = arme;
+        this.armeMonstre = armeMonstre;
     }
     randomstats(){
-        this.xp = Math.floor(Math.random() * 50 +1);
+        this.xp = Math.floor(Math.random() * this.xPHero +1);
         this.attaque = Math.floor(Math.random() * this.xp +1)
         this.defence = Math.floor(Math.random() * this.xp +1)
     }
