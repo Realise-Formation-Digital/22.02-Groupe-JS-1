@@ -8,37 +8,92 @@
     background-color: black;
     height: 9rem;
 }
+.gold-hero {
+    color:yellow;
+}
+.pv-hero {
+    color: red
+}
 #game {
     height: 43rem;
     background-image:url(../img/dungeon.png);
     background-repeat: no-repeat;
-    background-size:59rem;
+    background-size: 59rem;
+}
+.bye {
+    font-size: 2rem;
+    color: white;
+    width: 5rem;
+    background: none;
+    border-color: red;
 }
 .hero {
-    margin-top: 6rem;
-    margin-left: 3rem;
+    position: relative;
+    top: 8rem;
+    left: 4rem;
     height: 20rem;
 }
 .heroname {
-    margin-left: 14rem;
+    position: relative;
+    top: 8rem;
+    left: 15rem;
     font-size: 2rem;
 }
 .herodmg {
+    position: relative;
+    top: 8rem;
+    left: 11rem;
     height:3rem;
-    margin-left: 10rem;
+}
+.atkhero {
+    font-size: 2rem;
+    position: relative;
+    top: 5rem;
+    left: 9rem;
+    height:3rem;
 }
 .heroendu {
+    position: relative;
+    top: 8rem;
+    left: 13rem;
     height: 3rem;
-    margin-left: 12rem;
+}
+.defhero {
+    font-size: 2rem;
+    position: relative;
+    top: 5rem;
+    left: 10.5rem;
+    height: 3rem;
 }
 .monsterdmg {
     position: relative;
+    top: 1.5rem;
+    left: 35rem;
     height:3rem;
-    margin-left: 37rem;
-    bottom:5.5vh;
-    
 }
+.atkmonster {
+    font-size: 2rem;
+    position: relative;
+    top: 2rem;
+    left: 30rem;
+}
+
+.monsterendu {
+    position: relative;
+    top: -2rem;
+    left: 41rem;
+    height:3rem;
+}
+.defmonster {
+    font-size: 2rem;
+    position: relative;
+    top: -1.5rem;
+    left: 35.5rem;
+}
+
+
 /* bruno */
+/* Modal */
 .modal-content{
     width: 1000px;
 }
@@ -49,10 +104,19 @@
     
 }
 
+#inventory{
+    color:white;
+    border-color: red;
+}
+
 #amr-inventory{
     object-fit: cover;
 }
 
+.card-body{
+    color:black;
+}
+/* Modal content */
 .bordure{
     border-radius: 40px;
     border: 3px solid black;
