@@ -10,7 +10,7 @@
 }
 #game {
     height: 43rem;
-    background-image:url(./img/dungeon.png);
+    background-image:url(../img/dungeon.png);
     background-repeat: no-repeat;
     background-size:59rem;
 }
