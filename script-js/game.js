@@ -1,3 +1,7 @@
+
+// -------EVENTLISTENER PAGE MARCHAND-------
+
+
 // Btn pour acheter Defence... PAGE MARCHAND.
 const acheterDefBtn = document.getElementById("buyDef")
 
