@@ -21,96 +21,97 @@
             <div class="row align-items-start">
                 <div class="col-3"></div>
                 <div class="col-3 stat">
-                    <div class="fs-1">PV</div>
-                    <span class="fs-1">/50</span>
+                    <div class="fs-1">PV : <span class="pv-hero">10</span></div>
+                    <div class="fs-1">Exp : <span class="exp-hero">1</span>/50</div>
                 </div>
                 <div class="col-3 text-end stat">
                     <!-- Button trigger modal -->
-                        <button type="button" id="inventory" class="btn" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            Invertory
-                        </button>
+                    <button type="button" id="inventory" class="btn" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Invertory
+                    </button>
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="staticBackdropLabel">BAG</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <section id="arm-inventory">
-                                            <div class="container">
-                                                <div class="row justify-content-around">
-                                                    <div class="col-4">
-                                                        <div class="card bordure">
-                                                            <img src="images/armes.png" class="card-img-top img-fluid"
-                                                                alt="...">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title">Arme 1</h5>
-                                                                <p class="card-text">
-                                                                <p>F 20p </p>
-                                                                <p>E 20p</p>
-                                                                <p> Prix: 10k</p>
-                                                                <button type="button"
-                                                                    class="btn btn-secondary btn-sm power-up">Equipe</button>
-                                                            </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">BAG</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <section id="arm-inventory">
+                                        <div class="container">
+                                            <div class="row justify-content-around">
+                                                <div class="col-4">
+                                                    <div class="card bordure">
+                                                        <img src="images/armes.png" class="card-img-top img-fluid"
+                                                            alt="...">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Arme 1</h5>
+                                                            <p class="card-text">
+                                                            <p>Attaque 20p </p>
+                                                            <p>Defence 20p</p>
+                                                            <p>Prix: 10k</p>
+                                                            <button type="button"
+                                                                class="btn btn-secondary btn-sm power-up">Equipe</button>
                                                         </div>
                                                     </div>
-                                                    <div class="col-4">
-                                                        <div class="card bordure">
-                                                            <img src="images/arme-a-feu.png"
-                                                                class="card-img-top img-fluid" alt="...">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title">Arme 2</h5>
-                                                                <p class="card-text">F 30p</p>
-                                                                <p>E 30p</p>
-                                                                <p>prix 20k</p>
-                                                                <button type="button"
-                                                                    class="btn btn-secondary btn-sm power-up">Equipe</button>
-                                                            </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="card bordure">
+                                                        <img src="images/arme-a-feu.png" class="card-img-top img-fluid"
+                                                            alt="...">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Arme 2</h5>
+                                                            <p class="card-text">Attaque 30p</p>
+                                                            <p>Defence 30p</p>
+                                                            <p>Prix 20k</p>
+                                                            <button type="button"
+                                                                class="btn btn-secondary btn-sm power-up">Equipe</button>
                                                         </div>
                                                     </div>
-                                                    <div class="col-4">
-                                                        <div class="card bordure">
-                                                            <img src="images/arme-de-guerre-missile.png"
-                                                                class="card-img-top img-fluid" alt="...">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title">Arme 3</h5>
-                                                                <p class="card-text">F 40p</p>
-                                                                <p>E 40p</p>
-                                                                <p>prix 30k</p>
-                                                                <button type="button"
-                                                                    class="btn btn-secondary btn-sm power-up">Equipe</button>
-                                                            </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="card bordure">
+                                                        <img src="images/arme-de-guerre-missile.png"
+                                                            class="card-img-top img-fluid" alt="...">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Arme 3</h5>
+                                                            <p class="card-text">Attaque 40p</p>
+                                                            <p>Defence 40p</p>
+                                                            <p>Prix 30k</p>
+                                                            <button type="button"
+                                                                class="btn btn-secondary btn-sm power-up">Equipe</button>
                                                         </div>
                                                     </div>
-                                                    <div class="col-4">
-                                                        <div class="card bordure">
-                                                            <img src="images/bombe-atomique-concept-guerre-nucleaire-conception-icone-illustration-personnage-dessin-anime-plat_92289-281.webp"
-                                                                class="card-img-top img-fluid" alt="...">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title">Arme 4</h5>
-                                                                <p class="card-text">F 50p</p>
-                                                                <p>E 50p</p>
-                                                                <p>prix 40k</p>
-                                                                <button type="button"
-                                                                    class="btn btn-secondary btn-sm power-up">Equipe</button>
-                                                            </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="card bordure">
+                                                        <img src="images/bombe-atomique-concept-guerre-nucleaire-conception-icone-illustration-personnage-dessin-anime-plat_92289-281.webp"
+                                                            class="card-img-top img-fluid" alt="...">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Arme 4</h5>
+                                                            <p class="card-text"> 50p</p>
+                                                            <p>Defence 50p</p>
+                                                            <p>Prix 40k</p>
+                                                            <button type="button"
+                                                                class="btn btn-secondary btn-sm power-up">Equipe</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </section>
-                                    </div>
+                                        </div>
+                                    </section>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="gold fs-1">GOLD</div>
+                    <span class="gold-hero fs-1">10</span>
                 </div>
-                <div class="fs-1">GOLD</div>
             </div>
         </div>
         </div>
@@ -126,13 +127,14 @@
                         <span class="heroname">Hero</span>
                         <div class="container">
                             <div class="row justify-content-center">
-                                <div class="col-6"><img class="herodmg" src="./img/dmg.png"></div>
-                                <div class="col-6"><img class="heroendu" src="./img/endu.png"></div>
+                                <div class="col-6"><img class="herodmg" src="./img/dmg.png"><span class="attaque-hero">1</span></div>
+                                <div class="col-6"><img class="heroendu" src="./img/endu.png"><span class="defence-hero">1</span></div>
                             </div>
                         </div>
                     </div>
                     <span class="col-2">
-                        <img class="monsterdmg" src="./img/dmg.png">
+                        <div class="col-6"><img class="monsterdmg" src="./img/dmg.png"><span class="attaque-hero">1</span></div>
+                        <div class="col-6"><img class="monsterendu" src="./img/endu.png"><span class="defence-hero">1</span></div>
                     </span>
                 </div>
             </div>
