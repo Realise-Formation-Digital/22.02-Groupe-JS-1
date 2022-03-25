@@ -15,7 +15,7 @@ class monster extends Hero{
         this.armeMonstre = armeMonstre;
     }
     randomstats(){
-        this.xp = Math.floor(Math.random() * this.xPHero +1);
+        this.xp = Math.floor(Math.random() * this.xPHero +1) +((50*this.xPHero)/100);
         this.attaque = Math.floor(Math.random() * this.xp +1)
         this.defence = Math.floor(Math.random() * this.xp +1)
     }

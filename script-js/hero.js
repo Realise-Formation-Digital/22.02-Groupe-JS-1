@@ -1,6 +1,6 @@
-class Hero {
+ export class Hero {
     pV;
-    xPHero;
+    xPHero = 1;
     attaque;
     defence;
     sacDarmes = [];
@@ -25,15 +25,24 @@ class Hero {
         si le héro perd => points de vie -1*/
    }
    fuir(){
-       /*
-       si le héro fuit => l'expérience du héro diminue de 1 sauf si il a 0 xp
-       */
+      console.log("le hero prends la fuite")
+    this.xPHero--
+    
+    if(this.xPHero <1){
+        this.xPHero = 0
+    }
+     console.log(this.xPHero)
+        
+    
    }
    die(){
        /*
        si le pV du héro atteint 0 => hero meurt 
                                     gameover la partie est terminée
        */
+        console.log("Gameover")
+        window.location.href = "../pages.html/gameOver.html"
+      
    }
    equiper(){
        /** 
@@ -79,5 +88,5 @@ quel marchant et recevoir 50% du prix de l’arme
         */
    }
 }
-pV,xPHero,attaque,defence,sacDarmes,sous
-let hero = new hero(10,1,1,1,["épee","hache"], 1000)
+
+//let hero = new hero(10,1,1,1,["épee","hache"], 1000)
