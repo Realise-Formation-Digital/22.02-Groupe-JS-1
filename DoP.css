@@ -20,6 +20,13 @@
     background-repeat: no-repeat;
     background-size: 59rem;
 }
+.bye {
+    font-size: 2rem;
+    color: white;
+    width: 5rem;
+    background: none;
+    border-color: red;
+}
 .hero {
     position: relative;
     top: 8rem;
