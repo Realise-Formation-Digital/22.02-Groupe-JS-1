@@ -110,7 +110,7 @@ img{
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 75vh;
+    height: 80vh;
 }
 #fuir, #fight, #suite{
     padding: 1rem 2rem;
@@ -130,6 +130,13 @@ img{
     font-weight: bold;
     font-size: 2rem;
     background-color: red;
+    display: none;
+}
+#message-de-fuite{
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: rgb(255, 81, 0);
     display: none;
 }
 .inventairetext{

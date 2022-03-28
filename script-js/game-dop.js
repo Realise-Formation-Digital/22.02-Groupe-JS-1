@@ -75,6 +75,8 @@ const fuite = document.getElementById("fuir")
 fuite.addEventListener("click",function(){
     console.log("Je prends La fuite")
       hero.fuir()
+       let messageDeFuite = document.getElementById("message-de-fuite")
+       messageDeFuite.style.display = "block"
       
       expHero.innerText = hero.xPHero    
 })
