@@ -1,6 +1,7 @@
 // import { Hero } from './hero.js';
 
 export class Monster {
+    
     name;
     xp;
     attaque;
@@ -8,9 +9,9 @@ export class Monster {
     sous;
     armeMonstre;
     xPHero;
-    constructor(name, sous, xPHero, armeMonstre) {
+    constructor( sous, xPHero, armeMonstre, nameArray) {
         
-        this.name = name;
+        this.name = nameArray[Math.floor(Math.random()*5)];
         this.xp = Math.floor(Math.random() * xPHero +1) +((70*xPHero)/100);
         this.attaque = Math.floor(Math.random() * this.xp +1)
         this.defence = Math.floor(Math.random() * this.xp +1)
@@ -24,6 +25,7 @@ export class Monster {
          * combattre (S’il meurt, le héro récupère ses sous et l’arme du monstre et gagne 1 point d’ex-
 périence. S’il gagne contre le héro, le héro perd un point de vie)
          */
+        console.log(this.name)
         if(this.attaque>heroDefence){
             console.log("le monstre gagne")
             this.Monstrewin(heroPv)
@@ -46,13 +48,6 @@ périence. S’il gagne contre le héro, le héro perd un point de vie)
         messageDeVictoire.style.display = "block"
 
     }
-    renduMonstre(){
-        let imageMonstre = document.getElementById("image-monstre")
-        imageMonstre.innerHTML = `
-        
-        <img  class="img-fluid"src="../images/${this.name}.png" alt="">
-        `
-        
-    }
+    
 
 }

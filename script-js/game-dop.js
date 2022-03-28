@@ -6,11 +6,13 @@ armePardefault.defence = 1
 armePardefault.nom = "épée"
 armePardefault.prix = 50
 
+let nameArray = ["Oni","Ogre","Drake","Goblin","Green"]
+
 let hero = new Hero(100,100,100,1,[armePardefault], 1000)
 import { Monster } from './monstre.js'
 import { Armes } from './armes.js'
 let armMonstre = new Armes("hache",500,hero.xPHero)
-let monstre = new Monster("Troll",10,hero.xPHero, armMonstre)
+let monstre = new Monster(10,hero.xPHero, armMonstre, nameArray)
 console.log(armMonstre)
 let messageDeVictoire = document.getElementById("message-de-victoire")
 let messageDeDefaite = document.getElementById("message-de-defaite")
@@ -157,4 +159,14 @@ function RenduInventaire(){
         
     });
 }
-RenduInventaire()
+RenduInventaire();
+
+function renduMonstre(){
+    let imageMonstre = document.getElementById("image-monstre")
+    imageMonstre.innerHTML = `
+    
+    <img  class="img-fluid"src="../images/${monstre.name}.png" alt="">
+    `
+    
+}
+renduMonstre()
