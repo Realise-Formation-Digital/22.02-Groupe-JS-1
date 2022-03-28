@@ -7,6 +7,14 @@ body{
 footer{
     margin-top: 30px;
 }
+
+.exit{
+
+    display: flex;
+    justify-content: flex-end;
+
+}
+
 .power-up{
     background-color: rgb(182, 155, 5);
     padding: 1rem 2rem;
