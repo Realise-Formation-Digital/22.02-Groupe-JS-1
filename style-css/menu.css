@@ -1,0 +1,21 @@
+body{
+    height: 100vh;
+    background: rgb(3,112,140);
+    background: linear-gradient(0deg, rgba(3,112,140,1) 0%, rgba(4,48,65,1) 100%);
+    color: black;
+}
+
+.menubtn{
+    background-color: rgb(182, 155, 5);
+    padding: 1rem 2rem;
+    border: black 3px solid;
+    border-radius:30px;
+    margin: 0.5rem;
+    color: black;
+}
+
+#menu{
+    margin-top: 25%;
+    display:flex;
+    justify-content: center;
+}
