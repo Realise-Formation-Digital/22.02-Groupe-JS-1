@@ -1,6 +1,6 @@
  export class Hero {
     pV;
-    xPHero = 1;
+    xPHero;
     attaque;
     defence;
     sacDarmes = [];
@@ -16,7 +16,7 @@
     }
    
     
-   fight(monster){
+   fight(monstreDef,monstreAtt, monstreSous){
        console.log("je combat")
        /*si le héro bat le monstre
        
@@ -27,7 +27,31 @@
         // if(this.attaque>monster.defence){
         //     console.log("hero wins")
         //  }
+        let messageDeVictoire = document.getElementById("message-de-victoire")
+        let messageDeDefaite = document.getElementById("message-de-defaite")
+        let sousHero = document.getElementById("gold-hero")
+        if(this.attaque>monstreDef){
+           this.win(monstreSous)
+        }else if(monstreAtt>this.defence){
+            this.loose()
+            console.log("j ai perdu")
+        }
    }
+   win(monstreSous){
+    let messageDeVictoire = document.getElementById("message-de-victoire")
+    let sousHero = document.getElementById("gold-hero")
+    this.sous += monstreSous
+    sousHero.innerText = this.sous
+    messageDeVictoire.style.display = "block"
+}
+   loose(){
+    let messageDeDefaite = document.getElementById("message-de-defaite")
+    messageDeDefaite.style.display = "block"
+    let pvHero = document.getElementById("pv-hero")
+    this.pV--
+    pvHero.innerText = this.pV
+
+}
    fuir(){
       console.log("le hero prends la fuite")
     this.xPHero--
