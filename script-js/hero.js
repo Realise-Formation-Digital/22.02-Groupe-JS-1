@@ -16,13 +16,17 @@
     }
    
     
-   fight(){
+   fight(monster){
+       console.log("je combat")
        /*si le héro bat le monstre
        
         le héro récupère l'argent du monstre +
                          l'arme du monstre
                          + 1 point d'expérience
         si le héro perd => points de vie -1*/
+        // if(this.attaque>monster.defence){
+        //     console.log("hero wins")
+        //  }
    }
    fuir(){
       console.log("le hero prends la fuite")

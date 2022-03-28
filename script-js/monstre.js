@@ -1,4 +1,4 @@
-class monster extends Hero{
+ export class Monster extends Hero{
     name;
     xp;
     attaque;

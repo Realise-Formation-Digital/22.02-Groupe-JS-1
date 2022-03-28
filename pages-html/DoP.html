@@ -10,23 +10,23 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>defender of POO</title>
 </head>
-<header class="headed">
+<!-- <header class="headed">
     <H1 class="text-center">DEFENDER OF POO</H1>
-</header>
+</header> -->
 
 <body class="p-3 mb-2 bg-dark text-white">
     <!------------------------- STAT and INVENTORY ------------------------->
     <section>
-        <div class="container-fluid">
-            <div class="row align-items-start">
-                <div class="col-3"></div>
-                <div class="col-3 stat">
-                    <div class="fs-1">PV : <span class="pv-hero">10</span></div>
-                    <div class="fs-1">Exp : <span id="exp-hero">1</span>/50</div>
+        <div id="stats-box"class="container-fluid ">
+            <div class="row justify-content-center ">
+               
+                <div class="col-6 stat text-center inventairetext">
+                    <div class="fs-1 margintop">PV : <span id="pv-hero">10</span></div>
+                    <div class="fs-1 paddingbottom">Exp : <span id="exp-hero">1</span>/50</div>
                 </div>
-                <div class="col-3 text-end stat">
+                <div class="col-6 text-end stat text-center ">
                     <!-- Button trigger modal -->
-                    <button type="button" id="inventory" class="btn fs-2" data-bs-toggle="modal"
+                    <button type="button" id="inventory" class="btn fs-2 margintop btn btn-secondary" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop">
                         Inventory
                     </button>
@@ -47,7 +47,7 @@
                                             <div class="row justify-content-around">
                                                 <div class="col-4">
                                                     <div class="card bordure">
-                                                        <img src="images/armes.png" class="card-img-top img-fluid"
+                                                        <img src="../images/armes.png" class="card-img-top img-fluid"
                                                             alt="...">
                                                         <div class="card-body">
                                                             <h5 class="card-title">Arme 1</h5>
@@ -55,46 +55,46 @@
                                                             <p>Attaque 20p </p>
                                                             <p>Defence 20p</p>
                                                             <p>Prix: 10k</p>
-                                                            <button type="button" id="equiper" value="equipe" class="btn btn-secondary btn-sm power-up">Equipe</button>
+                                                            <button type="button" id="equiper" value="equipe" class="btn btn-secondary btn-sm power-up">Equiper</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-4">
                                                     <div class="card bordure">
-                                                        <img src="images/arme-a-feu.png" class="card-img-top img-fluid"
+                                                        <img src="../images/arme-a-feu.png" class="card-img-top img-fluid"
                                                             alt="...">
                                                         <div class="card-body">
                                                             <h5 class="card-title">Arme 2</h5>
                                                             <p class="card-text">Attaque 30p</p>
                                                             <p>Defence 30p</p>
                                                             <p>Prix 20k</p>
-                                                            <button type="button" id="equiper2" value="equipe" class="btn btn-secondary btn-sm power-up">Equipe</button>
+                                                            <button type="button" id="equiper2" value="equipe" class="btn btn-secondary btn-sm power-up">Equiper</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-4">
                                                     <div class="card bordure">
-                                                        <img src="images/arme-de-guerre-missile.png"
+                                                        <img src="../images/arme-de-guerre-missile.png"
                                                             class="card-img-top img-fluid" alt="...">
                                                         <div class="card-body">
                                                             <h5 class="card-title">Arme 3</h5>
                                                             <p class="card-text">Attaque 40p</p>
                                                             <p>Defence 40p</p>
                                                             <p>Prix 30k</p>
-                                                            <button type="button" id="equiper3" value="equipe" class="btn btn-secondary btn-sm power-up">Equipe</button>
+                                                            <button type="button" id="equiper3" value="equipe" class="btn btn-secondary btn-sm power-up">Equiper</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-4">
                                                     <div class="card bordure">
-                                                        <img src="images/bombe-atomique-concept-guerre-nucleaire-conception-icone-illustration-personnage-dessin-anime-plat_92289-281.webp"
+                                                        <img src="../images/bombe-atomique-concept-guerre-nucleaire-conception-icone-illustration-personnage-dessin-anime-plat_92289-281.webp"
                                                             class="card-img-top img-fluid" alt="...">
                                                         <div class="card-body">
                                                             <h5 class="card-title">Arme 4</h5>
                                                             <p class="card-text"> 50p</p>
                                                             <p>Defence 50p</p>
                                                             <p>Prix 40k</p>
-                                                            <button type="button" id="equiper4" value="equipe" class="btn btn-secondary btn-sm power-up">Equipe</button>
+                                                            <button type="button" id="equiper4" value="equipe" class="btn btn-secondary btn-sm power-up">Equiper</button>
 
                                                         </div>
                                                     </div>
@@ -106,42 +106,71 @@
                             </div>
                         </div>
                     </div>
-                    <div class="gold fs-1"><span class="gold-hero fs-1">20</span> GOLD</div>
+                    <div class="gold fs-1 paddingbottom inventairetext"><span id="gold-hero"class="gold-hero fs-1">20</span> GOLD</div>
                 </div>
             </div>
         </div>
         </div>
     </section>
     <!------------------------- COMBAT ------------------------->
-    <section>
-        <div class="container-fluid">
-            <div class="row align-items-start">
-                <div class="col-3"></div>
-                <div class="col-6" id="game">
-                    <button type="button" id="fuir" class="bye">fuir</button>
-                    <div class="col-2">
-                        <img class="hero" src="../img/hero.png">
-                        <span class="heroname">Hero</span>
-                        <div class="container">
-                            <div class="row justify-content-center">
-
-                                <div class="col-6"><img class="herodmg" src="../img/dmg.png"></div>
-                                <div class="col-6"><img class="heroendu" src="../img/endu.png"></div>
-                                <div class="col-6"><img class="herodmg" src="./img/dmg.png"><span class="atkhero">1</span></div>
-                                <div class="col-6"><img class="heroendu" src="./img/endu.png"><span class="defhero">1</span></div>
-
-                            </div>
+    <section id="combat-section">
+        <!-- boite du btn fuir -->
+       <div class="container">
+           <div class="row justify-content-evenly">
+                <div class="col-8 text-center mt-4">
+                    <button id="fuir" class="btn btn-danger">Run...</button>
+                    <button id="fight" class="btn btn-primary">Fight !</button>
+                </div>
+           </div>
+       </div>
+       <!-- boite des elements contenant le monstre et le hero -->
+       <div class="container"> 
+            <div class="row justify-row justify-content-evenly">
+                <div class="col-3 text-center carte">
+                    <div class="herotext">Hero</div>
+                   <img class="img-fluid"src="../img/hero.png" alt="">
+                    <div  class="row justify-content-evenly boite-propriete">
+                        <div class="col-3 text-center">
+                            <img class="img-fluid" src="../img/dmg.png">
+                            <div id="attaque-hero"class="herotext">1</div>
+                        </div>
+                        <div class="col-3 text-center">
+                            <img class="img-fluid" src="../img/endu.png">
+                            <div  id="defenceHero" class="herotext">1</div>
                         </div>
                     </div>
-                    <span class="col-2">
-
-                        <img class="monsterdmg" src="../img/dmg.png">
-
-                        <div class="col-6"><img class="monsterdmg" src="./img/dmg.png"><span class="atkmonster">1</span></div>
-                        <div class="col-6"><img class="monsterendu" src="./img/endu.png"><span class="defmonster">1</span></div>
-                    </span>
+                    
                 </div>
+                <div class="col-3 text-center carte">
+                    <div class="monstretext"id="monstre-name">Monstre</div>
+                    <img class="img-fluid"src="../images/oni.png" alt="">
+                    <div  class="row justify-content-evenly boite-propriete">
+                        <div class="col-3">
+                            <img class="img-fluid" src="../img/dmg.png">
+                            <div class="monstretext">1</div>
+                        </div>
+                        <div class="col-3">
+                            <img class="img-fluid" src="../img/endu.png">
+                            <div class="monstretext">1</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+       </div>
+       <div class="text-center">
+           <div id="message-de-victoire">
+               <div >Victoire !</div>
+               <div>Vous avez gagné une épée, 100 sous et 1 point d'Exp</div>
+               <button id="suite" class="btn btn-warning" >La suite !</button>
+           </div>
+           <div id="message-de-defaite">
+                <div >Défaite !</div>
+                <div>Vous avez perdu 1 point de vie</div>
+                <button id="suite" class="btn btn-warning" >La suite !</button>
+           </div>
+             
+       </div>
     </section>
     <script type="module" src="../script-js/game-dop.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

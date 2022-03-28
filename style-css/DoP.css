@@ -1,12 +1,16 @@
 /* Gab */
+
 .headed {
     background-color: rgb(143, 3, 3);
     color: white;
     height: 5rem;    
 }
 .stat {
-    background-color: black;
-    height: 9rem;
+    background-color: rgb(59, 59, 59);
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    
+    
 }
 .gold-hero {
     color:yellow;
@@ -20,14 +24,15 @@
     background-repeat: no-repeat;
     background-size: 59rem;
 }
-.bye {
+/* .bye {
     font-size: 2rem;
     color: white;
     width: 5rem;
     background: none;
     border-color: red;
-}
-.hero {
+    margin-top: 20px;
+} */
+/* .hero {
     position: relative;
     top: 8rem;
     left: 4rem;
@@ -90,8 +95,67 @@
     top: -1.5rem;
     left: 35.5rem;
 }
+ */
+.carte{
+    height: 300px;
+}
+img{
+    object-fit: cover;
+}
+.boite-propriete{
+    height: 100px;
+}
+#combat-section{
+    background-image: url("../img/dungeon.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+}
+#fuir, #fight, #suite{
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+#message-de-victoire{
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: green;
+    display: none;
 
-
+}
+#message-de-defaite{
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: red;
+    display: none;
+}
+.inventairetext{
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 0 0 blue, -2px 0 0 blue, 0 2px 0 blue, 0 -2px 0 blue, 1px 1px blue, -1px -1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue
+}
+.herotext{
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 0 0 green, -2px 0 0 green, 0 2px 0 green, 0 -2px 0 green, 1px 1px green, -1px -1px 0 green, 1px -1px 0 green, -1px 1px 0 green;
+}
+.monstretext{
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 0 0 red, -2px 0 0 red, 0 2px 0 red, 0 -2px 0 red, 1px 1px red, -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red
+}
+.margintop{
+    margin-top: 20px;
+}
+.paddingbottom{
+    padding-bottom: 20px;
+}
+.modal-body{
+    background-color: rgb(85, 83, 85);
+}
 /* bruno */
 /* Modal */
 .modal-content{
@@ -106,7 +170,7 @@
 
 #inventory{
     color:white;
-    border-color: red;
+    border-color: blue;
 }
 
 #amr-inventory{
