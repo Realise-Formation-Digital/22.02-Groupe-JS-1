@@ -16,33 +16,31 @@
     }
    
     
-   fight(monstreDef,monstreAtt, monstreSous){
+   fight(monstreDef,monstreAtt, monstreSous ,monstreArme){
        console.log("je combat")
-       /*si le héro bat le monstre
-       
-        le héro récupère l'argent du monstre +
-                         l'arme du monstre
-                         + 1 point d'expérience
-        si le héro perd => points de vie -1*/
-        // if(this.attaque>monster.defence){
-        //     console.log("hero wins")
-        //  }
         let messageDeVictoire = document.getElementById("message-de-victoire")
         let messageDeDefaite = document.getElementById("message-de-defaite")
         let sousHero = document.getElementById("gold-hero")
         if(this.attaque>monstreDef){
-           this.win(monstreSous)
+           this.win(monstreSous, monstreArme)
         }else if(monstreAtt>this.defence){
             this.loose()
             console.log("j ai perdu")
         }
+        
    }
-   win(monstreSous){
+   win(monstreSous, monstreArme){
     let messageDeVictoire = document.getElementById("message-de-victoire")
     let sousHero = document.getElementById("gold-hero")
     this.sous += monstreSous
     sousHero.innerText = this.sous
+    let expHero = document.getElementById("exp-hero")
+    this.xPHero++
+    expHero.innerText= this.xPHero
     messageDeVictoire.style.display = "block"
+    this.sacDarmes.push(monstreArme)
+    console.log(this.sacDarmes)
+    
 }
    loose(){
     let messageDeDefaite = document.getElementById("message-de-defaite")

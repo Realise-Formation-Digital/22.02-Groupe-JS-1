@@ -1,9 +1,17 @@
 // -----EVENTLISTENER PAGE DOP.--------
 import { Hero } from './hero.js';
-let hero = new Hero(100,100,100,1,[], 1000)
-import { Monster } from './monstre.js'
-let monstre = new Monster("Troll",10,"massue",hero.xPHero)
+let armePardefault = new Armes()
+armePardefault.attaque = 1
+armePardefault.defence = 1
+armePardefault.nom = "épée"
+armePardefault.prix = 50
 
+let hero = new Hero(100,100,100,1,[armePardefault], 1000)
+import { Monster } from './monstre.js'
+import { Armes } from './armes.js'
+let armMonstre = new Armes("hache",500,hero.xPHero)
+let monstre = new Monster("Troll",10,hero.xPHero, armMonstre)
+console.log(armMonstre)
 let messageDeVictoire = document.getElementById("message-de-victoire")
 let messageDeDefaite = document.getElementById("message-de-defaite")
 
@@ -43,16 +51,21 @@ fightBtn.addEventListener("click",function(){
     console.log("j'ai clické sur fight")
     //qui commence le combat
     let decision = Math.random()
+    let affichageDecision = document.getElementById("quiCommence")
     if(decision>0.5){
+
         console.log("le héro commence le combat")
         console.log(decision)
-        hero.fight(monstre.defence, monstre.attaque, monstre.sous)
+        affichageDecision.innerText = "le héro commence le combat"
+        hero.fight(monstre.defence, monstre.attaque, monstre.sous, armMonstre)
     }else if(decision<0.5){
         console.log("le monstre commence le combat")
         console.log(decision)
-        monstre.fight(hero.attaque, hero.defence)
+        affichageDecision.innerText = "le monstre commence le combat"
+        monstre.fight(hero.attaque, hero.defence, hero.pvHero)
     }
-    // hero.fight(monstre)
+    RenduInventaire()
+   
 })
 
 // Btn action Fuite...PAGE DOP.
@@ -104,5 +117,44 @@ const equiper4 = document.getElementById("equiper4")
 equiper4.addEventListener("click",function(){
     console.log("Je Equipe Arm 4")
 })
+//modal gab
+let mymodal = document.getElementById("INVmodal");
 
+let INV = document.getElementById("inventory");
 
+let span = document.getElementsByClassName("close")[0];
+
+INV.onclick = function() {
+    mymodal.style.display = "block";
+}
+
+span.onclick = function() {
+    mymodal.style.display = "none";
+}
+//intervention sur l'inventaire 
+let emplacementInventaire = document.getElementById("emplacementInventaire")
+function RenduInventaire(){
+    emplacementInventaire.innerHTML= ""
+
+    hero.sacDarmes.forEach(element => {
+        
+        emplacementInventaire.innerHTML += `
+        <div class="col-6">
+                                                <div class="card bordure">
+                                                    <img src="../images/armes.png" class="card-img-top img-fluid"
+                                                        alt="...">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">${element.nom}</h5>
+                                                        <p class="card-text">
+                                                        <p>Attaque ${element.attaque}</p>
+                                                        <p>Defence ${element.defence}</p>
+                                                        <button type="button" id="equiper" value="equipe" class="btn btn-secondary btn-sm power-up">Equiper</button>
+                                                    </div>
+                                                </div>
+        `
+        
+        
+        
+    });
+}
+RenduInventaire()

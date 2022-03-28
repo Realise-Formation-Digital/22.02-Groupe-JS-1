@@ -1,14 +1,14 @@
-class Armes{
+export class Armes{
     nom;
     defence;
     attaque;
     prix;
   
    //Definition
-      constructor(nom, defence, attaque, prix){
+      constructor(nom, prix, xPHero){
        this.nom = nom;
-       this.defence = defence;
-       this.attaque = attaque;
+       this.defence = Math.floor(Math.random() * xPHero +1);
+       this.attaque = Math.floor(Math.random() * xPHero +1);
        this.prix = prix;
    }
   
