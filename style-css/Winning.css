@@ -1,0 +1,46 @@
+.congrat {
+    color: green;
+    font-size: 6rem;
+    text-align: center;
+}
+.hero {
+    position: relative;
+    width: 40rem;
+    left: 40rem;
+    
+}
+.deadrake {
+    position: absolute;
+    top: 37rem;
+    left: -3rem;
+    width: 18rem;
+    transform:rotate(180deg);
+}
+.deadgob {
+    position: absolute;
+    width: 7rem;
+    top: 45rem;
+    left: 14rem;
+    transform:rotate(90deg);
+}
+.deadgreen{
+    position: absolute;
+    top: 37rem;
+    left:12rem;
+    width: 10rem;
+    transform:rotate(-40deg);
+}
+.deadogre{
+    position: absolute;
+    top:20rem;
+    left:-6rem;
+    width: 30rem;
+    transform:rotate(-120deg);
+}
+.deadoni{
+    position: absolute;
+    transform:rotate(-90deg);
+    left:3rem;
+    top:40rem;
+    width: 20rem;
+}
