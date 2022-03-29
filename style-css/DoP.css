@@ -3,7 +3,8 @@
 body{
     margin: 0%;
     padding: 0%;
-    background-image:url(../img/background.jpg) ;
+    /* background-image:url(../img/background.jpg) ; */
+    background-color: black;
 }
 
 .headed {
@@ -13,7 +14,7 @@ body{
 }
 .stat {
     background-color: rgb(59, 59, 59);
-    border-top: 3px solid black;
+     border-top: 3px solid black;
     border-bottom: 3px solid black;
     
     
@@ -24,84 +25,6 @@ body{
 .pv-hero {
     color: red
 }
-/* #game {
-    height: 43rem;
-    background-image:url(../img/dungeon.gif);
-    background-repeat: no-repeat;
-    background-size: 59rem; 
-}*/
-/* .bye {
-    font-size: 2rem;
-    color: white;
-    width: 5rem;
-    background: none;
-    border-color: red;
-    margin-top: 20px;
-} */
-/* .hero {
-    position: relative;
-    top: 8rem;
-    left: 4rem;
-    height: 20rem;
-}
-.heroname {
-    position: relative;
-    top: 8rem;
-    left: 15rem;
-    font-size: 2rem;
-}
-.herodmg {
-    position: relative;
-    top: 8rem;
-    left: 11rem;
-    height:3rem;
-}
-.atkhero {
-    font-size: 2rem;
-    position: relative;
-    top: 5rem;
-    left: 9rem;
-    height:3rem;
-}
-.heroendu {
-    position: relative;
-    top: 8rem;
-    left: 13rem;
-    height: 3rem;
-}
-.defhero {
-    font-size: 2rem;
-    position: relative;
-    top: 5rem;
-    left: 10.5rem;
-    height: 3rem;
-}
-.monsterdmg {
-    position: relative;
-    top: 1.5rem;
-    left: 35rem;
-    height:3rem;
-}
-.atkmonster {
-    font-size: 2rem;
-    position: relative;
-    top: 2rem;
-    left: 30rem;
-}
-
-.monsterendu {
-    position: relative;
-    top: -2rem;
-    left: 41rem;
-    height:3rem;
-}
-.defmonster {
-    font-size: 2rem;
-    position: relative;
-    top: -1.5rem;
-    left: 35.5rem;
-}
- */
 .carte{
     height: 300px;
 }
@@ -114,7 +37,7 @@ img{
 
 
 #combat-section{
-    background-image: url("../img/lava.gif");
+    background-image: url("../images/fighting_game_animation_9.gif");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -124,6 +47,9 @@ img{
     padding: 1rem 2rem;
     font-weight: bold;
     font-size: 2rem;
+}
+#fight{
+    background-color: rgb(8, 8, 97);
 }
 #message-de-victoire{
     padding: 1rem 2rem;
@@ -202,6 +128,14 @@ img{
     border: 3px solid black;
     font-weight: bold;
     text-align: center;
+}
+.bordure-left{
+    border-left: 3px solid black;
+    border-radius: 20px 0px 0px 20px;
+}
+.bordure-right{
+    border-right: 3px solid black;
+    border-radius: 0px 20px 20px 0px;
 }
 
 .power-up{

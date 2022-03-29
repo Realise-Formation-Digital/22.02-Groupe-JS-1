@@ -95,6 +95,9 @@
     pvHero.innerText = this.pV
 
 }
+    looseWhenMonsterStart(){
+        this.pV--
+    }
    fuir(){
       console.log("le hero prends la fuite")
     this.xPHero--
@@ -114,6 +117,9 @@
         console.log("Gameover")
         window.location.href = "../pages-html/gameOver.html"
 
+   }
+   gameFinish(){
+       window.location.href = "../pages-html/Winning.html"
    }
    equiper(){
        /**

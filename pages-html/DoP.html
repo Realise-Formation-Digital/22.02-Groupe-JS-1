@@ -16,15 +16,15 @@
 
 <body class="p-3 mb-2 bg-dark text-white">
     <!------------------------- STAT and INVENTORY ------------------------->
-    <section>
-        <div id="stats-box"class="container-fluid ">
-            <div class="row justify-content-center ">
+    <section class="">
+        <div id="stats-box"class="container-fluid">
+            <div class="row justify-content-center">
                
-                <div class="col-6 stat text-center inventairetext">
+                <div class="col-6 stat text-center inventairetext bordure-left">
                     <div class="fs-1 margintop">PV : <span id="pv-hero">10</span></div>
                     <div class="fs-1 paddingbottom">Exp : <span id="exp-hero">1</span>/50</div>
                 </div>
-                <div class="col-6 text-end stat text-center ">
+                <div class="col-6 text-end stat text-center bordure-right">
                     <button type="button" id="inventory" class="btn fs-2 margintop btn btn-secondary">Inventory</button>
                     <div id="INVmodal" class="Imodal">
                         <div class="modalcontent">
@@ -94,95 +94,9 @@
             </div>
         </div>
     </section>
-                    <!-- Button trigger modal -->
-                    <!-- <button type="button" id="inventory" class="btn fs-2 margintop btn btn-secondary" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">
-                        Inventory
-                    </button> -->
-
-                    <!-- Modal -->
-                    <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">BAG</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <section id="arm-inventory">
-                                        <div class="container">
-                                            <div class="row justify-content-around">
-                                                <div class="col-4">
-                                                    <div class="card bordure">
-                                                        <img src="../images/armes.png" class="card-img-top img-fluid"
-                                                            alt="...">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title">Arme 1</h5>
-                                                            <p class="card-text">
-                                                            <p>Attaque 20p </p>
-                                                            <p>Defence 20p</p>
-                                                            <p>Prix: 10k</p>
-                                                            <button type="button" id="equiper" value="equipe" class="btn btn-secondary btn-sm power-up">Equiper</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div class="card bordure">
-                                                        <img src="../images/arme-a-feu.png" class="card-img-top img-fluid"
-                                                            alt="...">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title">Arme 2</h5>
-                                                            <p class="card-text">Attaque 30p</p>
-                                                            <p>Defence 30p</p>
-                                                            <p>Prix 20k</p>
-                                                            <button type="button" id="equiper2" value="equipe" class="btn btn-secondary btn-sm power-up">Equiper</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div class="card bordure">
-                                                        <img src="../images/arme-de-guerre-missile.png"
-                                                            class="card-img-top img-fluid" alt="...">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title">Arme 3</h5>
-                                                            <p class="card-text">Attaque 40p</p>
-                                                            <p>Defence 40p</p>
-                                                            <p>Prix 30k</p>
-                                                            <button type="button" id="equiper3" value="equipe" class="btn btn-secondary btn-sm power-up">Equiper</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div class="card bordure">
-                                                        <img src="../images/bombe-atomique-concept-guerre-nucleaire-conception-icone-illustration-personnage-dessin-anime-plat_92289-281.webp"
-                                                            class="card-img-top img-fluid" alt="...">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title">Arme 4</h5>
-                                                            <p class="card-text"> 50p</p>
-                                                            <p>Defence 50p</p>
-                                                            <p>Prix 40k</p>
-                                                            <button type="button" id="equiper4" value="equipe" class="btn btn-secondary btn-sm power-up">Equiper</button>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="gold fs-1 paddingbottom inventairetext"><span id="gold-hero"class="gold-hero fs-1">20</span> GOLD</div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
+         
     <!------------------------- COMBAT ------------------------->
-    <section id="combat-section">
+    <section id="combat-section" class="bordure">
         <!-- boite du btn fuir -->
        <div class="container">
            <div class="row justify-content-evenly">
@@ -195,7 +109,7 @@
        </div>
        <!-- boite des elements contenant le monstre et le hero -->
        <div class="container"> 
-            <div class="row justify-row justify-content-evenly" style="margin-top: 15%;">
+            <div class="row justify-row justify-content-evenly" >
                 <div class="col-3 text-center carte">
                     <div class="herotext">Hero</div>
                    <img class="img-fluid"src="../img/hero.png" alt="">

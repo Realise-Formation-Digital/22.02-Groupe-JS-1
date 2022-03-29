@@ -1,6 +1,5 @@
+// ----- PAGE DOP.--------
 
-
-// -----EVENTLISTENER PAGE DOP.--------
 import { Hero } from './hero.js';
 let armePardefault = new Armes()
 armePardefault.attaque = 1
@@ -10,7 +9,7 @@ armePardefault.prix = 50
 
 let nameArray = ["Oni","Ogre","Drake","Goblin","Green","Viper","Wall"]
 
-let hero = new Hero(10,50,100,1,[armePardefault], 1000)
+let hero = new Hero(10,48,100,1,[armePardefault], 1000)
 import { Monster } from './monstre.js'
 import { Armes } from './armes.js'
 let armMonstre = new Armes("hache",500,hero.xPHero)
@@ -26,10 +25,8 @@ let messageDeDefaite = document.getElementById("message-de-defaite")
 //  localStorage.setItem("sous", hero.sous)
 //  console.log(localStorage)
 
-// document.getElementById("newGame").addEventListener("click",function(){
-//     localStorage.clear()
-//    alert("Vous débuter une nouvelle partie")
-// })
+
+
 //affichhage de l'experience du hero
 
 let expHero = document.getElementById("exp-hero")
@@ -60,11 +57,6 @@ let defenceMonstre = document.getElementById("defence-monstre")
 defenceMonstre.innerText = monstre.defence
  
 
-// document.getElementById("newGame").addEventListener("click",function(){
-//     localStorage.clear()
-//    alert("Vous débuter une nouvelle partie")
-// })
-
 //btn combat
 let fightBtn = document.getElementById("fight")
 fightBtn.addEventListener("click",function(){
@@ -84,6 +76,11 @@ fightBtn.addEventListener("click",function(){
         console.log(decision)
         affichageDecision.innerText = "le monstre commence le combat"
         if(monstre.attaque>hero.defence){
+            console.log("le monstre gagne")
+            hero.looseWhenMonsterStart()
+            console.log(hero.Pv)
+            let pvHerotext = document.getElementById("pv-hero")
+            pvHerotext.innerText = hero.pV
             //affichage defaite
             let messageDeDefaite = document.getElementById("message-de-defaite")
             messageDeDefaite.style.display = "block"
@@ -91,11 +88,7 @@ fightBtn.addEventListener("click",function(){
             messageDeFuite.style.display = "none"
             let messageDeVictoire = document.getElementById("message-de-victoire")
             messageDeVictoire.style.display = "none"
-            console.log("le monstre gagne")
             //diminution du pv du hero et affichage
-            hero.Pv--
-            let pvHerotext = document.getElementById("pv-hero")
-            pvHerotext.innerText = hero.pV
         }else if(hero.attaque > monstre.defence){
             let messageDeFuite = document.getElementById("message-de-fuite")
             messageDeFuite.style.display = "none"
@@ -107,6 +100,12 @@ fightBtn.addEventListener("click",function(){
         }
         
     }
+     if(hero.pV == 0){
+         hero.die()
+     }
+    if(hero.xPHero == 50){
+         hero.gameFinish()
+     }
     RenduInventaire()
    
 })
