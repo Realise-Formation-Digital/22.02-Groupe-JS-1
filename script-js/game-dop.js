@@ -9,7 +9,7 @@ armePardefault.prix = 50
 
 let nameArray = ["Oni","Ogre","Drake","Goblin","Green","Viper","Wall"]
 
-let hero = new Hero(10,49,100,1,[armePardefault], 1000)
+let hero = new Hero(10,40,10,5,[armePardefault], 1000)
 import { Monster } from './monstre.js'
 import { Armes } from './armes.js'
 let armMonstre = new Armes("hache",500,hero.xPHero)
