@@ -5,7 +5,7 @@
     defence;
     sacDarmes = [];
     sous;
-    
+
     constructor(pV,xPHero,attaque,defence,sacDarmes,sous){
         this.pV = pV
         this.xPHero = xPHero
@@ -14,8 +14,42 @@
         this.sacDarmes = sacDarmes
         this.sous = sous
     }
-   
-    
+    // set Pv(newValue){
+    //     this.pV = newValue
+    // }
+    // get Pv(){
+    //     return this.pV
+    // }
+    // set XpHero(newValue){
+    //     this.xPHero = newValue
+    // }
+    // get XpHero(){
+    //     return this.xPHero
+    // }
+    // set Attaque(newValue){
+    //     this.attaque = newValue
+    // }
+    // get Attaque(){
+    //     return this.attaque
+    // }
+    // set Defence(newValue){
+    //     this.defence = newValue
+    // }
+    // get Defence(){
+    //     return this.defence
+    // }
+    // set SacDarmes(newValue){
+    //     this.sacDarmes = newValue
+    // }
+    // get SacDarmes(){
+    //     return this.sacDarmes
+    // }
+    // set Sous(newValue){
+    //     this.sous = newValue
+    // }
+    // get Sous(){
+    //     return this.sous
+    // }
    fight(monstreDef,monstreAtt, monstreSous ,monstreArme){
        console.log("je combat")
         let messageDeVictoire = document.getElementById("message-de-victoire")
@@ -27,7 +61,10 @@
             this.loose()
             console.log("j ai perdu")
         }
-        
+        if(this.pV == 0){
+            this.die()
+        }
+
    }
    win(monstreSous, monstreArme){
     let messageDeVictoire = document.getElementById("message-de-victoire")
@@ -38,13 +75,21 @@
     this.xPHero++
     expHero.innerText= this.xPHero
     messageDeVictoire.style.display = "block"
+    let messageDeDefaite = document.getElementById("message-de-defaite")
+    messageDeDefaite.style.display = "none"
+    let messageDeFuite = document.getElementById("message-de-fuite")
+    messageDeFuite.style.display = "none"
     this.sacDarmes.push(monstreArme)
     console.log(this.sacDarmes)
-    
+
 }
    loose(){
+    let messageDeVictoire = document.getElementById("message-de-victoire")
+    messageDeVictoire.style.display = "none"
     let messageDeDefaite = document.getElementById("message-de-defaite")
     messageDeDefaite.style.display = "block"
+    let messageDeFuite = document.getElementById("message-de-fuite")
+    messageDeFuite.style.display = "none"
     let pvHero = document.getElementById("pv-hero")
     this.pV--
     pvHero.innerText = this.pV
@@ -53,25 +98,25 @@
    fuir(){
       console.log("le hero prends la fuite")
     this.xPHero--
-    
+    // localStorage.setItem("xp",this.xPHero)
     if(this.xPHero <1){
         this.xPHero = 0
     }
      console.log(this.xPHero)
-        
-    
+
+
    }
    die(){
        /*
-       si le pV du héro atteint 0 => hero meurt 
+       si le pV du héro atteint 0 => hero meurt
                                     gameover la partie est terminée
        */
         console.log("Gameover")
-        window.location.href = "../pages.html/gameOver.html"
-      
+        window.location.href = "../pages-html/gameOver.html"
+
    }
    equiper(){
-       /** 
+       /**
         * La force et l’endurance de l’arme, s’ajoute à la force et l’endurance
             du héro tant que l’arme est équipée.
         * Une arme équipée ne peut pas être vendue

@@ -1,3 +1,5 @@
+
+
 // -----EVENTLISTENER PAGE DOP.--------
 import { Hero } from './hero.js';
 let armePardefault = new Armes()
@@ -6,20 +8,33 @@ armePardefault.defence = 1
 armePardefault.nom = "épée"
 armePardefault.prix = 50
 
-let nameArray = ["Oni","Ogre","Drake","Goblin","Green"]
+let nameArray = ["Oni","Ogre","Drake","Goblin","Green","Viper","Wall"]
 
-let hero = new Hero(100,100,100,1,[armePardefault], 1000)
+let hero = new Hero(10,50,100,1,[armePardefault], 1000)
 import { Monster } from './monstre.js'
 import { Armes } from './armes.js'
 let armMonstre = new Armes("hache",500,hero.xPHero)
-let monstre = new Monster(10,hero.xPHero, armMonstre, nameArray)
+let monstre = new Monster(10,hero.xPHero,hero.pvHero, armMonstre, nameArray)
 console.log(armMonstre)
 let messageDeVictoire = document.getElementById("message-de-victoire")
 let messageDeDefaite = document.getElementById("message-de-defaite")
 
+
+//localStorage
+//  localStorage.setItem("pv",hero.pV)
+//  localStorage.setItem("xp", hero.xPHero)
+//  localStorage.setItem("sous", hero.sous)
+//  console.log(localStorage)
+
+// document.getElementById("newGame").addEventListener("click",function(){
+//     localStorage.clear()
+//    alert("Vous débuter une nouvelle partie")
+// })
 //affichhage de l'experience du hero
+
 let expHero = document.getElementById("exp-hero")
-expHero.innerText = hero.xPHero
+// expHero.innerText = localStorage.getItem("xp", hero.xPHero)
+expHero.innerText =  hero.xPHero
 //affichage des points de vie du hero
 let pvHero = document.getElementById("pv-hero")
 pvHero.innerText = hero.pV
@@ -45,17 +60,21 @@ let defenceMonstre = document.getElementById("defence-monstre")
 defenceMonstre.innerText = monstre.defence
  
 
-
+// document.getElementById("newGame").addEventListener("click",function(){
+//     localStorage.clear()
+//    alert("Vous débuter une nouvelle partie")
+// })
 
 //btn combat
 let fightBtn = document.getElementById("fight")
 fightBtn.addEventListener("click",function(){
     console.log("j'ai clické sur fight")
+    fightBtn.style.display= "none"
+      fuite.style.display="none"
     //qui commence le combat
     let decision = Math.random()
     let affichageDecision = document.getElementById("quiCommence")
     if(decision>0.5){
-
         console.log("le héro commence le combat")
         console.log(decision)
         affichageDecision.innerText = "le héro commence le combat"
@@ -64,7 +83,29 @@ fightBtn.addEventListener("click",function(){
         console.log("le monstre commence le combat")
         console.log(decision)
         affichageDecision.innerText = "le monstre commence le combat"
-        monstre.fight(hero.attaque, hero.defence, hero.pvHero)
+        if(monstre.attaque>hero.defence){
+            //affichage defaite
+            let messageDeDefaite = document.getElementById("message-de-defaite")
+            messageDeDefaite.style.display = "block"
+            let messageDeFuite = document.getElementById("message-de-fuite")
+            messageDeFuite.style.display = "none"
+            let messageDeVictoire = document.getElementById("message-de-victoire")
+            messageDeVictoire.style.display = "none"
+            console.log("le monstre gagne")
+            //diminution du pv du hero et affichage
+            hero.Pv--
+            let pvHerotext = document.getElementById("pv-hero")
+            pvHerotext.innerText = hero.pV
+        }else if(hero.attaque > monstre.defence){
+            let messageDeFuite = document.getElementById("message-de-fuite")
+            messageDeFuite.style.display = "none"
+            let messageDeVictoire = document.getElementById("message-de-victoire")
+            messageDeVictoire.style.display = "block"
+            let messageDeDefaite = document.getElementById("message-de-defaite")
+            messageDeDefaite.style.display = "none"
+            console.log("le monstre perd")
+        }
+        
     }
     RenduInventaire()
    
@@ -75,52 +116,56 @@ const fuite = document.getElementById("fuir")
 fuite.addEventListener("click",function(){
     console.log("Je prends La fuite")
       hero.fuir()
+      fightBtn.style.display= "none"
+      fuite.style.display="none"
        let messageDeFuite = document.getElementById("message-de-fuite")
        messageDeFuite.style.display = "block"
-      
+       let messageDeVictoire = document.getElementById("message-de-victoire")
+       messageDeVictoire.style.display = "none"
+       let messageDeDefaite = document.getElementById("message-de-defaite")
+       messageDeDefaite.style.display = "none"
+       
+    //   localStorage.setItem("xp",hero.xPHero-1)
       expHero.innerText = hero.xPHero    
 })
-//  if(hero.pV == 0){
-//      console.log("die")
-//      hero.die()
-//  }
+
 
 // Btn equiper 1
-let equiper = document.getElementById("equiper")
-equiper.addEventListener("click",function()
-{
-    if(equiper.value === "equipe"){
-        equiper.value = "desequipe";
-    }else{
-        equiper.value = "equipe";
-    }
+// let equiper = document.getElementById("equiper")
+// equiper.addEventListener("click",function()
+// {
+//     if(equiper.value === "equipe"){
+//         equiper.value = "desequipe";
+//     }else{
+//         equiper.value = "equipe";
+//     }
 
-    console.log("Je Equipe Arm 1")
-})
-
-
-// Btn equiper 2
-const equiper2 = document.getElementById("equiper2")
-
-equiper2.addEventListener("click",function(){
-    console.log("Je Equipe Arm 2")
-})
+//     console.log("Je Equipe Arm 1")
+// })
 
 
-// Btn equiper 3
-const equiper3 = document.getElementById("equiper3")
+// // Btn equiper 2
+// const equiper2 = document.getElementById("equiper2")
 
-equiper3.addEventListener("click",function(){
-    console.log("Je Equipe Arm 3")
-})
+// equiper2.addEventListener("click",function(){
+//     console.log("Je Equipe Arm 2")
+// })
 
 
-// Btn equiper 4
-const equiper4 = document.getElementById("equiper4")
+// // Btn equiper 3
+// const equiper3 = document.getElementById("equiper3")
 
-equiper4.addEventListener("click",function(){
-    console.log("Je Equipe Arm 4")
-})
+// equiper3.addEventListener("click",function(){
+//     console.log("Je Equipe Arm 3")
+// })
+
+
+// // Btn equiper 4
+// const equiper4 = document.getElementById("equiper4")
+
+// equiper4.addEventListener("click",function(){
+//     console.log("Je Equipe Arm 4")
+// })
 //modal gab
 let mymodal = document.getElementById("INVmodal");
 
