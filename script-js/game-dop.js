@@ -1,6 +1,5 @@
+// ----- PAGE DOP.--------
 
-
-// -----EVENTLISTENER PAGE DOP.--------
 import { Hero } from './hero.js';
 let armePardefault = new Armes()
 armePardefault.attaque = 1
@@ -10,7 +9,7 @@ armePardefault.prix = 50
 
 let nameArray = ["Oni","Ogre","Drake","Goblin","Green","Viper","Wall"]
 
-let hero = new Hero(10,49,100,1,[armePardefault], 1000)
+let hero = new Hero(10,48,100,1,[armePardefault], 1000)
 import { Monster } from './monstre.js'
 import { Armes } from './armes.js'
 let armMonstre = new Armes("hache",500,hero.xPHero)
@@ -26,10 +25,8 @@ let messageDeDefaite = document.getElementById("message-de-defaite")
 //  localStorage.setItem("sous", hero.sous)
 //  console.log(localStorage)
 
-// document.getElementById("newGame").addEventListener("click",function(){
-//     localStorage.clear()
-//    alert("Vous débuter une nouvelle partie")
-// })
+
+
 //affichhage de l'experience du hero
 
 let expHero = document.getElementById("exp-hero")
@@ -59,11 +56,6 @@ defenceHero.innerText = hero.defence
 let defenceMonstre = document.getElementById("defence-monstre")
 defenceMonstre.innerText = monstre.defence
  
-
-// document.getElementById("newGame").addEventListener("click",function(){
-//     localStorage.clear()
-//    alert("Vous débuter une nouvelle partie")
-// })
 
 //btn combat
 let fightBtn = document.getElementById("fight")

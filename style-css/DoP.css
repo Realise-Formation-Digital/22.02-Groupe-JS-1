@@ -25,84 +25,6 @@ body{
 .pv-hero {
     color: red
 }
-/* #game {
-    height: 43rem;
-    background-image:url(../img/dungeon.gif);
-    background-repeat: no-repeat;
-    background-size: 59rem; 
-}*/
-/* .bye {
-    font-size: 2rem;
-    color: white;
-    width: 5rem;
-    background: none;
-    border-color: red;
-    margin-top: 20px;
-} */
-/* .hero {
-    position: relative;
-    top: 8rem;
-    left: 4rem;
-    height: 20rem;
-}
-.heroname {
-    position: relative;
-    top: 8rem;
-    left: 15rem;
-    font-size: 2rem;
-}
-.herodmg {
-    position: relative;
-    top: 8rem;
-    left: 11rem;
-    height:3rem;
-}
-.atkhero {
-    font-size: 2rem;
-    position: relative;
-    top: 5rem;
-    left: 9rem;
-    height:3rem;
-}
-.heroendu {
-    position: relative;
-    top: 8rem;
-    left: 13rem;
-    height: 3rem;
-}
-.defhero {
-    font-size: 2rem;
-    position: relative;
-    top: 5rem;
-    left: 10.5rem;
-    height: 3rem;
-}
-.monsterdmg {
-    position: relative;
-    top: 1.5rem;
-    left: 35rem;
-    height:3rem;
-}
-.atkmonster {
-    font-size: 2rem;
-    position: relative;
-    top: 2rem;
-    left: 30rem;
-}
-
-.monsterendu {
-    position: relative;
-    top: -2rem;
-    left: 41rem;
-    height:3rem;
-}
-.defmonster {
-    font-size: 2rem;
-    position: relative;
-    top: -1.5rem;
-    left: 35.5rem;
-}
- */
 .carte{
     height: 300px;
 }
@@ -125,6 +47,9 @@ img{
     padding: 1rem 2rem;
     font-weight: bold;
     font-size: 2rem;
+}
+#fight{
+    background-color: rgb(8, 8, 97);
 }
 #message-de-victoire{
     padding: 1rem 2rem;
