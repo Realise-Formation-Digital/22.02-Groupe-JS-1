@@ -44,23 +44,37 @@ fuite.addEventListener("click",function(){
 //      console.log("die")
 //      hero.die()
 //  }
+// Modal button
+let mymodal = document.getElementById("INVmodal");
 
+let INV = document.getElementById("inventory");
+
+let span = document.getElementsByClassName("close")[0];
+
+INV.onclick = function() {
+    mymodal.style.display = "block";
+}
+
+span.onclick = function() {
+    mymodal.style.display = "none";
+}
+
+// Modal content
 // Btn equiper 1
-let equiper = document.getElementById("equiper")
-equiper.addEventListener("click",function()
-{
-    if(equiper.value === "equipe"){
-        equiper.value = "desequipe";
-    }else{
-        equiper.value = "equipe";
-    }
+let changer = document.getElementById("equiper");
 
-    console.log("Je Equipe Arm 1")
-})
+changer.addEventListener("click", ()=>{
+
+    if(changer.innerText === "equipe"){
+        changer.innerText = "equiper";
+    }else{
+        changer.innerText= "equipe";
+    }
+});
 
 
 // Btn equiper 2
-const equiper2 = document.getElementById("equiper2")
+let equiper2 = document.getElementById("equiper2")
 
 equiper2.addEventListener("click",function(){
     console.log("Je Equipe Arm 2")
@@ -68,7 +82,7 @@ equiper2.addEventListener("click",function(){
 
 
 // Btn equiper 3
-const equiper3 = document.getElementById("equiper3")
+let equiper3 = document.getElementById("equiper3")  
 
 equiper3.addEventListener("click",function(){
     console.log("Je Equipe Arm 3")
@@ -76,10 +90,8 @@ equiper3.addEventListener("click",function(){
 
 
 // Btn equiper 4
-const equiper4 = document.getElementById("equiper4")
+let equiper4 = document.getElementById("equiper4")
 
 equiper4.addEventListener("click",function(){
     console.log("Je Equipe Arm 4")
 })
-
-
