@@ -3,7 +3,8 @@
 body{
     margin: 0%;
     padding: 0%;
-    background-image:url(../img/background.jpg) ;
+    /* background-image:url(../img/background.jpg) ; */
+    background-color: black;
 }
 
 .headed {
@@ -13,7 +14,7 @@ body{
 }
 .stat {
     background-color: rgb(59, 59, 59);
-    border-top: 3px solid black;
+     border-top: 3px solid black;
     border-bottom: 3px solid black;
     
     
@@ -114,7 +115,7 @@ img{
 
 
 #combat-section{
-    background-image: url("../img/dungeon.gif");
+    background-image: url("../images/fighting_game_animation_9.gif");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -202,6 +203,14 @@ img{
     border: 3px solid black;
     font-weight: bold;
     text-align: center;
+}
+.bordure-left{
+    border-left: 3px solid black;
+    border-radius: 20px 0px 0px 20px;
+}
+.bordure-right{
+    border-right: 3px solid black;
+    border-radius: 0px 20px 20px 0px;
 }
 
 .power-up{
