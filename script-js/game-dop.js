@@ -172,3 +172,4 @@ function renduMonstre(){
     
 }
 renduMonstre()
+
