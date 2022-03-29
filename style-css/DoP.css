@@ -4,15 +4,6 @@
     border-top: 3px solid black;
     border-bottom: 3px solid black;    
 }
-.gold-hero {
-    color:yellow;
-}
-.pv-hero {
-    color: red
-}
-.carte{
-    height: 300px;
-}
 img{
     object-fit: cover;
 }

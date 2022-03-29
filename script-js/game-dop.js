@@ -65,13 +65,12 @@ let changer = document.getElementById("equiper");
 
 changer.addEventListener("click", ()=>{
 
-    if(changer.innerText === "equipe"){
-        changer.innerText = "equiper";
+    if(changer.innerText === "Equipe"){
+        changer.innerText = "desequiper";
     }else{
-        changer.innerText= "equipe";
+        changer.innerText= "Equipe";
     }
 });
-
 
 // Btn equiper 2
 let equiper2 = document.getElementById("equiper2")
@@ -80,7 +79,6 @@ equiper2.addEventListener("click",function(){
     console.log("Je Equipe Arm 2")
 })
 
-
 // Btn equiper 3
 let equiper3 = document.getElementById("equiper3")  
 
@@ -88,10 +86,11 @@ equiper3.addEventListener("click",function(){
     console.log("Je Equipe Arm 3")
 })
 
-
 // Btn equiper 4
 let equiper4 = document.getElementById("equiper4")
 
 equiper4.addEventListener("click",function(){
     console.log("Je Equipe Arm 4")
 })
+
+//gameover
