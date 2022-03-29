@@ -161,3 +161,5 @@ quel marchant et recevoir 50% du prix de l’arme
 }
 
 //let hero = new hero(10,1,1,1,["épee","hache"], 1000)
+
+

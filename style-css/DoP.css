@@ -1,5 +1,11 @@
 /* Gab */
 
+body{
+    margin: 0%;
+    padding: 0%;
+    background-image:url(../img/background.jpg) ;
+}
+
 .headed {
     background-color: rgb(143, 3, 3);
     color: white;
@@ -18,12 +24,12 @@
 .pv-hero {
     color: red
 }
-#game {
+/* #game {
     height: 43rem;
-    background-image:url(../img/dungeon.png);
+    background-image:url(../img/dungeon.gif);
     background-repeat: no-repeat;
-    background-size: 59rem;
-}
+    background-size: 59rem; 
+}*/
 /* .bye {
     font-size: 2rem;
     color: white;
@@ -105,8 +111,10 @@ img{
 .boite-propriete{
     height: 100px;
 }
+
+
 #combat-section{
-    background-image: url("../img/dungeon.png");
+    background-image: url("../img/dungeon.gif");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -178,6 +186,7 @@ img{
 #inventory{
     color:white;
     border-color: blue;
+    
 }
 
 #amr-inventory{
@@ -213,7 +222,8 @@ img{
     height: 60%;
 }
 .modalcontent{
-    background-color: #ffffff;
+    background-image:url(../img/bag.jpg);
+    background-color: #000000;
     padding: 20px;
     border: 1px solid #888;
     width: 60%;
